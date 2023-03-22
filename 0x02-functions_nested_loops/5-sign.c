@@ -2,7 +2,7 @@
 
 /**
 * main - check the code.
-*
+*@n: variable to determineif input is greater than, less than or is zero
 * Return: Always 0.
 */
 int print_sign(int n)

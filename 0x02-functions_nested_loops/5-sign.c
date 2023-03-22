@@ -5,29 +5,24 @@
 *
 * Return: Always 0.
 */
-int main(void)
+int print_sign(int n)
 {
-int r;
+int test;
 
-r = print_sign(98);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(0);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(0xff);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-r = print_sign(-1);
-_putchar(',');
-_putchar(' ');
-_putchar(r + '0');
-_putchar('\n');
-return (0);
+if (n > 0)
+{
+test = 1;
+_putchar('+');
+}
+else if (n == 0)
+{
+test = 0;
+_putchar('0');
+}
+else
+{
+test = -1;
+_putchar('-');
+}
+return (test);
 }

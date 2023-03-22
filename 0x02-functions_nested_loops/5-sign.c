@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
-* main - check the code.
-*@n: variable to determineif input is greater than, less than or is zero
-* Return: Always 0.
+* print_sign - check input if its positive, negative or zero
+* @n: variable to determine if input is greater than, less than or is zero
+* Return: 0 if succesful
 */
+
 int print_sign(int n)
 {
-int test;
-
+int i;
 if (n > 0)
 {
-test = 1;
 _putchar('+');
+i = 1;
 }
-else if (n == 0)
+else if (n < 0)
 {
-test = 0;
-_putchar('0');
+_putchar('-');
+i = -1;
 }
 else
 {
-test = -1;
-_putchar('-');
+_putchar('0');
+i = 0;
 }
-return (test);
+return (i);
 }

@@ -1,42 +1,50 @@
+#include "main.h"
+/**
+* print_times_table - prints out the n times table, starting with 0
+* @n: times table
+*/
 void print_times_table(int n)
 {
-int a = 0, rep, b;
+int x, y, z, k, t;
 
-if (n < 0 || n > 15)
-return;
-
-while (a <= n)
+for (x = 0; x <= n; x++)
 {
-for (b = 0; b <= n; b++)
+for (y = 0; y <= n; y++)
 {
-rep = a * b;
-if  (b == 0)
-_putchar('0' + rep);
-else if (rep < 10)
+z = x * y;
+if (z == 0 && y == 0)
+_putchar(z + '0');
+else if (z > 99)
 {
+k = z % 10;
+t = (z / 10) % 10;
+z /= 100;
+_putchar(',');
 _putchar(' ');
-_putchar(' ');
-_putchar('0' + rep);
+_putchar(z + '0');
+_putchar(t + '0');
+_putchar(k + '0');
 }
-else if (rep < 100)
+else if (z > 9)
 {
+k = z % 10;
+z /= 10;
+_putchar(',');
 _putchar(' ');
-_putchar('0' + rep / 10);
-_putchar('0' + rep % 10);
+_putchar(' ');
+_putchar(z + '0');
+_putchar(k + '0');
+
 }
 else
 {
-_putchar('0' + rep / 100);
-_putchar('0' + (rep - 100) / 10);
-_putchar('0' + rep % 10);
-}
-if (b < n)
-{
 _putchar(',');
 _putchar(' ');
+_putchar(' ');
+_putchar(' ');
+_putchar(z + '0');
 }
 }
 _putchar('\n');
-a++;
 }
 }

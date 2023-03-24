@@ -16,5 +16,3 @@ _putchar(j);
 }
 _putchar('\n');
 }
-Give feedback
-

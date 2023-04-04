@@ -13,6 +13,6 @@ for (j = 0; j < 8; j++)
 {
 _putchar(a[i][j]);
 }
-_putchar('\0');
+_putchar('\n');
 }
 }

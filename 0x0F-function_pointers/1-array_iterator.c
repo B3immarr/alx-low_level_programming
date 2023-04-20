@@ -14,6 +14,6 @@ if (array == NULL || action == NULL)
 while (size-- > 0)
 {
 action(*array);
-array++
+array++;
 }
 }
